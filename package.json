@@ -1,0 +1,33 @@
+{
+  "name": "@chaseadamsio/chaseadams.io",
+  "version": "0.0.1",
+  "description": "A bespoke blog platform",
+  "main": "index.js",
+  "scripts": {
+    "build": "iojs index.js && webpack"
+  },
+  "author": "Chase Adams (http://chaseadams.io)",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^5.5.8",
+    "css-loader": "^0.14.5",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "front-matter": "^1.0.0",
+    "json-loader": "^0.5.2",
+    "jsx-loader": "^0.13.2",
+    "marked": "^0.3.3",
+    "moment": "^2.10.3",
+    "moment-timezone": "^0.4.0",
+    "node-dir": "^0.1.8",
+    "node-jsx": "^0.13.3",
+    "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.2.0",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "rimraf": "^2.4.0",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.12.3",
+    "superagent": "^1.2.0",
+    "webpack": "^1.9.11"
+  }
+}
