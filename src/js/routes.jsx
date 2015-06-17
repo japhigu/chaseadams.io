@@ -13,10 +13,14 @@ marked.setOptions({ smartypants: false });
 var Post = React.createClass({
     render () {
         var title = this.props.isIndex ? <a href={this.props.attributes.slug}>{this.props.attributes.title}</a> : this.props.attributes.title;
+        var postFooter = this.props.attributes.date ?
+            <div className="post-footer">{moment.tz(this.props.attributes.date, zone).format("YYYY/MM/DD")}</div> :
+            '';
         return (
             <div className="post">
                 <h1 className="post-title">{title}</h1>
-                <div className="post-content" dangerouslySetInnerHTML={{ __html: marked(this.props.body)}} />
+                <div className="post-summary" dangerouslySetInnerHTML={{ __html: marked(this.props.body)}} />
+                {postFooter}
             </div>
         );
     }
@@ -26,11 +30,14 @@ var Home = React.createClass({
     render () {
         var posts = this.props.posts.map(function (post, idx) {
 
+            if (post.attributes.hasOwnProperty('blogroll') && post.attributes.blogroll === false) {
+                return;
+            }
+
             return (
                 <div key={idx} className="post">
-                    <h1 className="post-title"><a href={post.attributes.slug}>{post.attributes.title}</a></h1>
-                    <div className="post-summary" dangerouslySetInnerHTML={{ __html: marked(post.body)}} />
-                    <div className="post-footer">{moment.tz(post.attributes.date, zone).format("YYYY/MM/DD")}</div>
+                    <time>{moment.tz(post.attributes.date, zone).format("YYYY/MM/DD")}</time>
+                    <a href={post.attributes.slug} className="post-title">{post.attributes.title}</a>
                 </div>
             );
         });
@@ -38,6 +45,19 @@ var Home = React.createClass({
         return (
             <div>
                 {posts}
+            </div>
+        );
+    }
+});
+
+var Sidebar = React.createClass({
+    render () {
+        return (
+            <div id="sidebar">
+                <div className="component">
+                    <h1>About</h1>
+                    This is me.
+                </div>
             </div>
         );
     }
@@ -56,14 +76,17 @@ var App = React.createClass({
                         <ul id="globalNav" className="nav cf">
                             <li><h1><a href="/" className="site-title">Chase Adams</a></h1></li>
                             <ul className="site-nav">
-                                <li><a href="">About</a></li>
+                                <li><a href="/about">About</a></li>
                                 <li><a href="">Blog</a></li>
                                 <li><a href="">Contact</a></li>
                             </ul>
                         </ul>
                     </div>
                     <div id="content">
-                        <RouteHandler {...this.props} />
+                        <div id="main">
+                            <RouteHandler {...this.props} />
+                        </div>
+                        <Sidebar />
                     </div>
                     <script src="/js/bundle.js" />
                 </body>
