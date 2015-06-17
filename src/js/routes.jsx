@@ -52,14 +52,16 @@ var App = React.createClass({
                     <link href="/css/app.css" rel="stylesheet" type="text/css" />
                 </head>
                 <body>
-                    <ul id="globalNav" className="nav cf">
-                        <li><h1><a href="/" className="site-title">Chase Adams</a></h1></li>
-                        <ul className="site-nav">
-                            <li><a href="">About</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="">Contact</a></li>
+                    <div id="globalNavContainer">
+                        <ul id="globalNav" className="nav cf">
+                            <li><h1><a href="/" className="site-title">Chase Adams</a></h1></li>
+                            <ul className="site-nav">
+                                <li><a href="">About</a></li>
+                                <li><a href="">Blog</a></li>
+                                <li><a href="">Contact</a></li>
+                            </ul>
                         </ul>
-                    </ul>
+                    </div>
                     <div id="content">
                         <RouteHandler {...this.props} />
                     </div>
