@@ -21,35 +21,55 @@ body {
   background: #eff1f5;
 }
 
-#globalNav {
-  width: 25%;
-  height: 100%;
-  position: fixed;
-  float: left;
+.cf:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+.cf { display: inline-block; }
+/* start commented backslash hack \*/
+* html .cf { height: 1%; }
+.cf { display: block; }
+
+
+#globalNavContainer {
+  width: 100%;
   border-right: 1px solid #1B1E23;
   background: #242628;
+
+  #globalNav {
+    width: 960px;
+    margin: 0 auto;
+  }
 
   &, ul {
     list-style: none;
   }
 
   h1 {
-    margin: 6rem 3rem;
+    float: left;
+    margin: 0;
   }
 
   .site-nav {
-    margin: 3rem;
-    border-bottom: 1px solid #343d46;
+    float: right;
+    margin: 0;
+    padding: 0;
     li {
-      padding: .5rem;
-      border-top: 1px solid #343d46;
+      float: left;
+      padding: 0 .5rem;
+      line-height: 32px;
+      vertical-align: middle;
     }
   }
 }
 
 #content {
-  width: 75%;
-  margin-left: 25%;
+  width: 960px;
+  margin: 0 auto;
 
   &.compact {
     .summaries {
