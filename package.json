@@ -4,9 +4,9 @@
   "description": "A bespoke blog platform",
   "main": "index.js",
   "scripts": {
-    "build": "iojs index.js && webpack",
+    "build": "node index.js && webpack",
     "prestart": "npm run build",
-    "start": "iojs lib/server.js"
+    "start": "node lib/server.js"
   },
   "author": "Chase Adams (http://chaseadams.io)",
   "license": "MIT",
