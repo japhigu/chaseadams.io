@@ -35,5 +35,8 @@
     "superagent": "^1.2.0",
     "webpack": "^1.9.11"
   },
-  "engine": "iojs 1.0.2"
+  "engines": {
+    "iojs": "1.0.x",
+    "node": "0.10.x"
+  }
 }
