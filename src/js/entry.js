@@ -9,3 +9,5 @@ Router.run(Routes, Router.HistoryLocation, (Root) => {
   var initialProps = [];
   React.render(React.createElement(Root, initialProps), document);
 });
+
+require('./3party/googleAnalytics.js')();
