@@ -10,4 +10,5 @@ require('../sass/app.scss');
 //   React.render(React.createElement(Root, initialProps), document);
 // });
 
-require('./3party/googleAnalytics.js')();
+var GA = require('./3party/googleAnalytics.js');
+GA();
