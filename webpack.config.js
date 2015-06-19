@@ -8,8 +8,7 @@ module.exports = {
         extensions: ['', '.json', '.jsx', '.js']
     },
     entry: {
-        app: './src/js/entry.js',
-        vendor: ['superagent']
+        app: './src/js/entry.js'
     },
     output: {
         path: __dirname + '/dist',
@@ -19,9 +18,6 @@ module.exports = {
         new webpack.ProvidePlugin({
             React: 'react',
             Router: 'react-router'
-        }),
-        new webpack.DefinePlugin({
-            API_HOST: JSON.stringify(process.env.NODE_ENV === 'production' ? 'http://chaseadamsio-api.apps.chaseadams.io/' : 'http://localhost:8080/')
         }),
         new ExtractTextPlugin("css/[name].css"),
     ],
