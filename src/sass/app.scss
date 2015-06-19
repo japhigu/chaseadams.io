@@ -41,7 +41,7 @@ body {
   background: #242628;
 
   #globalNav {
-    width: 960px;
+    width: 1125px;
     margin: 0 auto;
   }
 
@@ -68,7 +68,7 @@ body {
 }
 
 #content {
-  width: 960px;
+  width: 1125px;
   margin: 0 auto;
 
   &.compact {
@@ -93,13 +93,28 @@ body {
   }
 
   .post {
-    margin: 1rem;
-    background: #fff;
-    border: 1px solid #dfe1e8;
+    // margin: 1rem 0;
+    // background: #fff;
+    // border: 1px solid #dfe1e8;
+
+    margin-top: 0.75em;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid #dbdbdb;
+
+    time {
+      width: 100px;
+      font-family: "Ubuntu", Tahoma, sans-serif;
+    }
 
     h1 a {
       text-decoration: none;
     }
+
+    a.post-title {
+      font-size: 1em;
+      font-weight: normal;
+    }
+
 
     .post-title, .post-summary, .post-content, .post-aside, #comments {
       padding: 1.5rem;
@@ -128,4 +143,43 @@ body {
 
 #globalNav, #content {
   padding: 1rem;
+}
+
+%flex {
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#content {
+  @extend %flex;
+}
+
+#main {
+  width: 70%;
+  padding-right: 1rem;
+}
+
+#sidebar {
+  width: 30%;
+  margin-top: 1rem;
+  padding-left: 1rem;
+
+  .component {
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #dfe1e8;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      text-transform: lowercase;
+    }
+  }
 }
