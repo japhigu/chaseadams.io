@@ -1,7 +1,7 @@
 ---
 title: Building A Rustic Industrial Standing Desk
 date: 2014-10-08T03:36:52Z
-slug: /2014/10/building-a-rustic-industrial-standing-desk
+slug: 2014/10/building-a-rustic-industrial-standing-desk
 ---
 
 This weekend I decided to build a standing desk. It was a lot of work, but with a little time, a little intuition, a few trips to Home Depot and a couple of setbacks, I am now writing this post from my rustic industrial standing desk!
