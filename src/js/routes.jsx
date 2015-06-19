@@ -70,13 +70,12 @@ var Sidebar = React.createClass({
 
 var App = React.createClass({
     render () {
-        //<link href="//cloud.webtype.com/css/352bb3dd-c530-455a-9bf9-65e61e11ae62.css" rel="stylesheet" type="text/css" />
         return (
             <html>
                 <head>
                     <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css" />
                     <link href="/css/app.css" rel="stylesheet" type="text/css" />
-
+                    <link href="//cloud.webtype.com/css/352bb3dd-c530-455a-9bf9-65e61e11ae62.css" rel="stylesheet" type="text/css" />
                 </head>
                 <body>
                     <div id="globalNavContainer">
