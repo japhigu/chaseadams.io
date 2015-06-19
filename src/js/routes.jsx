@@ -1,14 +1,15 @@
-import React from 'react';
+var React = require('react');
 var Router = require('react-router');
 var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
+var Link = Router.Link;
 var RouteHandler = Router.RouteHandler;
 var moment = require('moment-timezone');
 var zone = 'America/Los_Angeles';
 moment.tz.setDefault(zone);
 var marked = require('marked');
 marked.setOptions({ smartypants: false });
-// import { Route, Link, DefaultRoute, RouteHandler } from 'react-router';
+var request = require('superagent');
 
 var Post = React.createClass({
     render () {
@@ -27,6 +28,10 @@ var Post = React.createClass({
 });
 
 var Home = React.createClass({
+    comoonentWillMount () {
+        reqest
+    },
+
     render () {
         var posts = this.props.posts.map(function (post, idx) {
 
@@ -37,7 +42,7 @@ var Home = React.createClass({
             return (
                 <div key={idx} className="post">
                     <time>{moment.tz(post.attributes.date, zone).format("YYYY/MM/DD")}</time>
-                    <a href={post.attributes.slug} className="post-title">{post.attributes.title}</a>
+                    <Link to="post" params={{ slug: post.attributes.slug}} className="post-title">{post.attributes.title}</Link>
                 </div>
             );
         });
@@ -65,11 +70,13 @@ var Sidebar = React.createClass({
 
 var App = React.createClass({
     render () {
+        //<link href="//cloud.webtype.com/css/352bb3dd-c530-455a-9bf9-65e61e11ae62.css" rel="stylesheet" type="text/css" />
         return (
             <html>
                 <head>
                     <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css" />
                     <link href="/css/app.css" rel="stylesheet" type="text/css" />
+
                 </head>
                 <body>
                     <div id="globalNavContainer">
@@ -86,7 +93,6 @@ var App = React.createClass({
                         <div id="main">
                             <RouteHandler {...this.props} />
                         </div>
-                        <Sidebar />
                     </div>
                     <script src="/js/bundle.js" />
                 </body>
@@ -98,7 +104,7 @@ var App = React.createClass({
 var Routes = (
     <Route name="app" path="/" handler={App}>
         <Route path="/posts" handler={Home} />
-        <Route path="/posts/:slug" handler={Post} />
+        <Route name="post" path="/:slug" handler={Post} />
         <DefaultRoute handler={Home} />
     </Route>
 );

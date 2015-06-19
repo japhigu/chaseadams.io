@@ -11,10 +11,10 @@ a {
   }
 }
 
-html, body, ul {
+html, body, ul.site-nav li, h1{
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu", Tahoma, sans-serif;
+  font-family: "Ubuntu", Tahoma, sans-serif !important;
 }
 
 body {
@@ -184,7 +184,7 @@ body {
   }
 }
 
-p {
+p, ol, ul, li {
   font-family: "Harriet Text";
   font-style: normal;
   font-weight: normal;

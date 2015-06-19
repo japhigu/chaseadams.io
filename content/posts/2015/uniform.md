@@ -2,6 +2,7 @@
 title: Separation of Work & Life
 slug: uniform
 date: 2015-06-15T02:21:37Z
+draft: true
 ---
 
 It was 4:30 AM. I knew I had goals for the morning, but I thought to myself, "checking my work email won't hurt. Surely no one's emailed me between 9 PM last night and this morning." The next thing I knew it was 6:30 AM and I'd spent most of my morning reactively responding to work emails.

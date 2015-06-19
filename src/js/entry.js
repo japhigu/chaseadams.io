@@ -5,6 +5,7 @@ var Router = require('react-router');
 
 var Routes = require('./routes.jsx');
 
-Router.run(Routes, Router.HashLocation, (Root) => {
-  React.render(<Root/>, document.body);
-});React.render(<Routes />, document.getElementById('main'));
+Router.run(Routes, Router.HistoryLocation, (Root) => {
+  var initialProps = [];
+  React.render(React.createElement(Root, initialProps), document);
+});
