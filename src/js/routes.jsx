@@ -84,8 +84,7 @@ var App = React.createClass({
                             <li><h1><a href="/" className="site-title">Chase Adams</a></h1></li>
                             <ul className="site-nav">
                                 <li><a href="/about">About</a></li>
-                                <li><a href="">Blog</a></li>
-                                <li><a href="">Contact</a></li>
+                                <li><a href="/">Blog</a></li>
                             </ul>
                         </ul>
                     </div>
