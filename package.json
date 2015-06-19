@@ -4,7 +4,7 @@
   "description": "A bespoke blog platform",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js && webpack",
+    "build": "node index.js && webpack --optimize-minimize",
     "prestart": "npm run build",
     "start": "node lib/server.js"
   },
