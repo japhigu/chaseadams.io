@@ -4,7 +4,7 @@ title: Using Grunt For A Better Workflow
 slug: 2013/11/using-grunt-for-a-better-workflow
 ---
 
-<img alt="Grunt: The NodeJS Task Runner" src="/imgs/2013/11/grunt-logo.png" class="align-left small-size" /> Grunt is a NodeJS task runner that allows you to automate all the things! I use it to speed up my development workflow and enhancing the performance of my projects.
+<img alt="Grunt: The NodeJS Task Runner" src="http://www.realchaseadams.com/imgs/2013/11/grunt-logo.png" class="align-left small-size" /> Grunt is a NodeJS task runner that allows you to automate all the things! I use it to speed up my development workflow and enhancing the performance of my projects.
 
 ## 2 Years: A Sour Memory
 
@@ -18,7 +18,7 @@ As I'm writing this post, I've got Chrome open in the background and SublimeText
 
 __This is just one advantage of Grunt__.
 
-<img alt="Automate All The Things with Grunt" src="/imgs/2014/01/automateallthetasks.jpg" class="align-right mid-size" />Grunt has become one of those things in life where you didn't realize just how badly you needed it until you start using it and thinking, _"what have I been doing with my life?"_
+<img alt="Automate All The Things with Grunt" src="http://www.realchaseadams.com/imgs/2014/01/automateallthetasks.jpg" class="align-right mid-size" />Grunt has become one of those things in life where you didn't realize just how badly you needed it until you start using it and thinking, _"what have I been doing with my life?"_
 
 By automating all the things I used to have to manually do, I make more time to do more things, and ultimately make more time to focus on the important things while Grunt takes care of the trivially mundane.
 
