@@ -15,7 +15,7 @@ Open System Preferences (click the Apple in the top left and "System Preferences
 Once in the keyboard pane, click the "Modifier Keys..." button. A new dialogue box will pop up and the first select menu is for **Caps Lock**.
 
 
-<img src="/imgs/2014/11/remap-capslock.png" />
+<img src="http://www.realchaseadams.com/imgs/2014/11/remap-capslock.png" />
 
 I find the option key to be the most unnatural modifier key of all of them, so I remap my Caps Lock to "Option". In Mac OSX Yosemite there's a "Select keyboard" select menu, so make sure you map it for all of the peripheral keyboards you have listed as well.
 
