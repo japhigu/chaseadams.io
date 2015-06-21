@@ -16,7 +16,7 @@ var Post = React.createClass({
         var title = this.props.isIndex ? <a href={this.props.attributes.slug}>{this.props.attributes.title}</a> : this.props.attributes.title;
         return (
             <div className="post">
-                <div style={{ padding: '0 1.5rem'}}>
+                <div>
                     <time>{moment.tz(this.props.attributes.date, zone).format("MMMM DD, YYYY")}</time>
                 </div>
                 <h1 className="post-title">{title}</h1>
@@ -59,8 +59,11 @@ var Sidebar = React.createClass({
         return (
             <div id="sidebar">
                 <div className="component">
-                    <h1>About Me</h1>
-                    <img className="avatar" src="https://en.gravatar.com/userimage/7669606/70535a5544c65e07c71b541fda761f29.jpg?size=200" /> This is me.
+                    <h1>Site Navigation</h1>
+                    <ul className="site-nav">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/">Blog</a></li>
+                    </ul>
                 </div>
             </div>
         );
@@ -72,25 +75,24 @@ var App = React.createClass({
         return (
             <html>
                 <head>
-                    <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css" />
+                    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
                     <link href="/css/app.css" rel="stylesheet" type="text/css" />
-                    <link href="//cloud.webtype.com/css/352bb3dd-c530-455a-9bf9-65e61e11ae62.css" rel="stylesheet" type="text/css" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                 </head>
                 <body>
                     <div id="globalNavContainer">
                         <ul id="globalNav" className="nav cf">
-                            <li><h1><a href="/" className="site-title">Chase Adams</a></h1></li>
-                            <ul className="site-nav">
-                                <li><a href="/about">About</a></li>
-                                <li><a href="/">Blog</a></li>
-                            </ul>
+                            <li>
+                                <h1><a href="/" className="site-title">Chase Adams</a></h1>
+                                <h2>intentional input for outstanding output.</h2>
+                            </li>
                         </ul>
                     </div>
                     <div id="content">
                         <div id="main">
                             <RouteHandler {...this.props} />
                         </div>
+                        <Sidebar />
                     </div>
                     <script src="/js/bundle.js" />
                 </body>
