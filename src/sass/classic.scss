@@ -29,7 +29,8 @@ ul, li {
 
 img {
     max-width: 100%;
-    .align-left {
+
+    &.align-left {
         float: left;
         margin: 0 1rem 1rem 0;
     }
