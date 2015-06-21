@@ -1,6 +1,7 @@
 ---
 title: Resume
 slug: resume
+date: 2013-06-21T02:47:00Z
 blogroll: false
 ---
 
