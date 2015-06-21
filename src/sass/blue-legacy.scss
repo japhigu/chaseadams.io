@@ -1,0 +1,248 @@
+a {
+  color: #5A95E5;
+  color: #5CCAAB;
+  text-decoration: none;
+  -webkit-transition: all .5s;
+
+  &:hover {
+    -webkit-transition: all .5s;
+    color: #2F67B2;
+    color: #3AA586;
+  }
+}
+
+html, body, ul.site-nav li, h1{
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", Tahoma, sans-serif !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: #eff1f5;
+}
+
+.cf:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+.cf { display: inline-block; }
+/* start commented backslash hack \*/
+* html .cf { height: 1%; }
+.cf { display: block; }
+
+
+#globalNavContainer {
+  width: 100%;
+  border-right: 1px solid #1B1E23;
+  background: #242628;
+
+  #globalNav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &, ul {
+    list-style: none;
+  }
+
+  a {
+    color: #888888;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  h1 {
+    float: left;
+    margin: 0;
+    font-size: 24px;
+    text-transform: lowercase;
+
+    a {
+      color: #5CCAAB;
+      &:hover {
+        color: #3AA586;
+      }
+    }
+  }
+
+  .site-nav {
+    float: right;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      padding: 0 0 0 2rem;
+      line-height: 24px;
+      vertical-align: middle;
+    }
+  }
+}
+
+#content {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &.compact {
+    .summaries {
+      border-bottom: 1px solid #dfe1e8;
+    }
+
+    .post {
+      margin: 0;
+      border-bottom: none;
+
+      h1 {
+        margin: 0;
+        padding: 1rem;
+        font-size: 1rem;
+      }
+      .post-summary, .post-footer {
+        display: none;
+      }
+    }
+
+  }
+
+  .blogroll .post time {
+    display: inline;
+    width: 100px;
+  }
+
+  .post {
+    margin-top: 0.75em;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid #dbdbdb;
+
+    time {
+      display: block;
+      margin-bottom: 1rem;
+      font-family: "Ubuntu", Tahoma, sans-serif;
+      font-family: "Harriet Text";
+    }
+
+    h1 a {
+      text-decoration: none;
+    }
+
+    a.post-title {
+      font-size: 1em;
+      font-weight: normal;
+    }
+
+
+    .post-title, .post-summary, .post-content, .post-aside, #comments {
+      padding: 0 1.5rem;
+      padding-bottom: 0;
+    }
+
+    .post-summary, .post-content, .post-aside, #comments {
+      padding-top: 0;
+      line-height: 2rem;
+      font-size: 1.15rem;
+    }
+
+    .post-footer {
+      padding: 1.5rem;
+      background: #343d46;
+      color: #a3be8c;
+      font-size: .9rem;
+    }
+  }
+
+}
+
+#globalNav, #content {
+  padding: 1rem;
+}
+
+%flex {
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#content {
+  @extend %flex;
+}
+
+#main {
+  width: 70%;
+  padding-right: 1rem;
+}
+
+#sidebar {
+  width: 30%;
+  margin-top: 1rem;
+  padding-left: 1rem;
+
+  .component {
+    @extend .cf;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #dfe1e8;
+
+    h1 {
+      margin: 0 0 10px;
+      padding: 0;
+      font-size: 20px;
+      text-transform: lowercase;
+    }
+  }
+
+  .avatar {
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin: 0px 10px 10px 0;
+    border-radius: 50%;
+  }
+}
+
+p, ol, ul, li {
+  font-family: "Harriet Text";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@media (max-width: 690px) {
+  #main, #sidebar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #sidebar {
+    margin-top: 1rem;
+  }
+
+  #content .post {
+    h1 {
+      font-size: 24px;
+    }
+    .post-title {
+      padding: 0;
+    }
+    .post-summary {
+      padding: 0;
+    }
+  }
+
+  #content .blogroll .post time {
+    display: none;
+  }
+}
+
