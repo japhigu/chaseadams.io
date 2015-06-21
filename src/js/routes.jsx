@@ -70,6 +70,16 @@ var Sidebar = React.createClass({
     }
 });
 
+var Footer = React.createClass({
+    render () {
+        return (
+            <div id="footer">
+                Static site generated with React, Webpack and Sass.
+            </div>
+        );
+    }
+});
+
 var App = React.createClass({
     render () {
         return (
@@ -94,6 +104,7 @@ var App = React.createClass({
                         </div>
                         <Sidebar />
                     </div>
+                    <Footer />
                     <script src="/js/bundle.js" />
                 </body>
             </html>

@@ -90,3 +90,11 @@ ul, li {
         }
     }
 }
+
+#footer {
+    @extend %masterContainer;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #000;
+    text-align: center;
+}
