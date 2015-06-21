@@ -25,7 +25,8 @@ module.exports = {
         loaders: [
             { test: /\.(?:jsx|js)$/, loader: 'jsx-loader?insertPragma=React.DOM&harmony' },
             { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css-loader?sourceMap!sass?sourceMap')},
-            { test: /\.json$/, loader: 'json-loader' }
+            { test: /\.json$/, loader: 'json-loader' },
+            { test: /\.(ico)$/, loader: 'static-loader' }
         ]
     }
 };

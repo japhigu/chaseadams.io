@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node index.js && webpack --optimize-minimize",
     "prestart": "npm run build",
-    "start": "node lib/server.js"
+    "start": "node lib/server.js",
+    "server": "webpack-dev-server --content-base=dist"
   },
   "author": "Chase Adams (http://chaseadams.io)",
   "license": "MIT",
@@ -31,6 +32,7 @@
     "react-router": "^0.13.3",
     "rimraf": "^2.4.0",
     "sass-loader": "^1.0.2",
+    "static-loader": "^0.1.8",
     "style-loader": "^0.12.3",
     "superagent": "^1.2.0",
     "webpack": "^1.9.11"
