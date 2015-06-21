@@ -84,6 +84,7 @@ var App = React.createClass({
         return (
             <html>
                 <head>
+                    <title>chaseadams.io: intentional input for outstanding output</title>
                     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
                     <link href="/css/app.css" rel="stylesheet" type="text/css" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
