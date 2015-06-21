@@ -1,4 +1,5 @@
 require('../sass/app.scss');
+require("static?!../favicon.ico?output=favicon.ico");
 // var React = require('react');
 // var Router = require('react-router');
 
