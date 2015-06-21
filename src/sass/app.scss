@@ -4,10 +4,14 @@
 
 a {
   color: #5A95E5;
+  color: #5CCAAB;
   text-decoration: none;
+  -webkit-transition: all .5s;
 
   &:hover {
+    -webkit-transition: all .5s;
     color: #2F67B2;
+    color: #3AA586;
   }
 }
 
@@ -41,7 +45,7 @@ body {
   background: #242628;
 
   #globalNav {
-    width: 1125px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -49,9 +53,25 @@ body {
     list-style: none;
   }
 
+  a {
+    color: #888888;
+    &:hover {
+      color: #fff;
+    }
+  }
+
   h1 {
     float: left;
     margin: 0;
+    font-size: 24px;
+    text-transform: lowercase;
+
+    a {
+      color: #5CCAAB;
+      &:hover {
+        color: #3AA586;
+      }
+    }
   }
 
   .site-nav {
@@ -60,15 +80,15 @@ body {
     padding: 0;
     li {
       float: left;
-      padding: 0 .5rem;
-      line-height: 32px;
+      padding: 0 0 0 2rem;
+      line-height: 24px;
       vertical-align: middle;
     }
   }
 }
 
 #content {
-  width: 1125px;
+  max-width: 1200px;
   margin: 0 auto;
 
   &.compact {
@@ -93,17 +113,16 @@ body {
   }
 
   .post {
-    // margin: 1rem 0;
-    // background: #fff;
-    // border: 1px solid #dfe1e8;
-
     margin-top: 0.75em;
     padding-bottom: 0.75em;
     border-bottom: 1px solid #dbdbdb;
 
     time {
-      width: 100px;
+      // width: 100px;
+      display: block;
+      margin-bottom: 1rem;
       font-family: "Ubuntu", Tahoma, sans-serif;
+      font-family: "Harriet Text";
     }
 
     h1 a {
@@ -119,10 +138,6 @@ body {
     .post-title, .post-summary, .post-content, .post-aside, #comments {
       padding: 1.5rem;
       padding-bottom: 0;
-
-      ul {
-        margin-left: 40px;
-      }
     }
 
     .post-summary, .post-content, .post-aside, #comments {
@@ -171,16 +186,25 @@ body {
   padding-left: 1rem;
 
   .component {
+    @extend .cf;
     padding: 1rem;
     background: #fff;
     border: 1px solid #dfe1e8;
 
     h1 {
-      margin: 0;
+      margin: 0 0 10px;
       padding: 0;
       font-size: 20px;
       text-transform: lowercase;
     }
+  }
+
+  .avatar {
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin: 0px 10px 10px 0;
+    border-radius: 50%;
   }
 }
 
@@ -189,3 +213,36 @@ p, ol, ul, li {
   font-style: normal;
   font-weight: normal;
 }
+
+@media (max-width: 690px) {
+  #main, #sidebar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #sidebar {
+    margin-top: 1rem;
+  }
+
+  #content .post {
+    h1 {
+      font-size: 24px;
+    }
+    .post-title {
+      padding: 0;
+    }
+    .post-summary {
+      padding: 0;
+    }
+  }
+
+  #content .blogroll .post time {
+    display: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
