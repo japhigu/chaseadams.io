@@ -14,14 +14,11 @@ var request = require('superagent');
 var Post = React.createClass({
     render () {
         var title = this.props.isIndex ? <a href={this.props.attributes.slug}>{this.props.attributes.title}</a> : this.props.attributes.title;
-        var postFooter = this.props.attributes.date ?
-            <div className="post-footer">{moment.tz(this.props.attributes.date, zone).format("YYYY/MM/DD")}</div> :
-            '';
         return (
             <div className="post">
+                <time>{moment.tz(this.props.attributes.date, zone).format("MMMM DD, YYYY")}</time>
                 <h1 className="post-title">{title}</h1>
                 <div className="post-summary" dangerouslySetInnerHTML={{ __html: marked(this.props.body)}} />
-                {postFooter}
             </div>
         );
     }
@@ -48,7 +45,7 @@ var Home = React.createClass({
         });
 
         return (
-            <div>
+            <div className="blogroll">
                 {posts}
             </div>
         );
@@ -60,8 +57,8 @@ var Sidebar = React.createClass({
         return (
             <div id="sidebar">
                 <div className="component">
-                    <h1>About</h1>
-                    This is me.
+                    <h1>About Me</h1>
+                    <img className="avatar" src="https://en.gravatar.com/userimage/7669606/70535a5544c65e07c71b541fda761f29.jpg?size=200" /> This is me.
                 </div>
             </div>
         );
@@ -76,6 +73,7 @@ var App = React.createClass({
                     <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css" />
                     <link href="/css/app.css" rel="stylesheet" type="text/css" />
                     <link href="//cloud.webtype.com/css/352bb3dd-c530-455a-9bf9-65e61e11ae62.css" rel="stylesheet" type="text/css" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
                 </head>
                 <body>
                     <div id="globalNavContainer">
