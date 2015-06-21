@@ -118,11 +118,13 @@ body {
     border-bottom: 1px solid #dbdbdb;
 
     time {
-      // width: 100px;
       display: block;
       margin-bottom: 1rem;
       font-family: "Ubuntu", Tahoma, sans-serif;
       font-family: "Harriet Text";
+      .blogroll & {
+        width: 100px;
+      }
     }
 
     h1 a {
