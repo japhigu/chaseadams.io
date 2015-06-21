@@ -21,6 +21,10 @@ html, body, ul.site-nav li, h1{
   font-family: "Ubuntu", Tahoma, sans-serif !important;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   background: #eff1f5;
 }
@@ -243,10 +247,6 @@ p, ol, ul, li {
 
   #content .blogroll .post time {
     display: none;
-  }
-
-  img {
-    max-width: 100%;
   }
 }
 
