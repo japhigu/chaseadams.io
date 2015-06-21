@@ -85,7 +85,7 @@ var App = React.createClass({
             <html>
                 <head>
                     <title>chaseadams.io: intentional input for outstanding output</title>
-                    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+                    <link rel="shortcut icon" href="/favicon.ico?v=2" type="image/x-icon" />
                     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
                     <link href="/css/app.css" rel="stylesheet" type="text/css" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
