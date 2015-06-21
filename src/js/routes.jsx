@@ -16,7 +16,9 @@ var Post = React.createClass({
         var title = this.props.isIndex ? <a href={this.props.attributes.slug}>{this.props.attributes.title}</a> : this.props.attributes.title;
         return (
             <div className="post">
-                <time>{moment.tz(this.props.attributes.date, zone).format("MMMM DD, YYYY")}</time>
+                <div style={{ padding: '0 1.5rem'}}>
+                    <time>{moment.tz(this.props.attributes.date, zone).format("MMMM DD, YYYY")}</time>
+                </div>
                 <h1 className="post-title">{title}</h1>
                 <div className="post-summary" dangerouslySetInnerHTML={{ __html: marked(this.props.body)}} />
             </div>

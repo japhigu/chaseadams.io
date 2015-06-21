@@ -112,6 +112,11 @@ body {
 
   }
 
+  .blogroll .post time {
+    display: inline;
+    width: 100px;
+  }
+
   .post {
     margin-top: 0.75em;
     padding-bottom: 0.75em;
@@ -122,9 +127,6 @@ body {
       margin-bottom: 1rem;
       font-family: "Ubuntu", Tahoma, sans-serif;
       font-family: "Harriet Text";
-      .blogroll & {
-        width: 100px;
-      }
     }
 
     h1 a {
@@ -138,7 +140,7 @@ body {
 
 
     .post-title, .post-summary, .post-content, .post-aside, #comments {
-      padding: 1.5rem;
+      padding: 0 1.5rem;
       padding-bottom: 0;
     }
 
