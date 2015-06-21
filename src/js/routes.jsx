@@ -59,11 +59,10 @@ var Sidebar = React.createClass({
         return (
             <div id="sidebar">
                 <div className="component">
-                    <h1>Site Navigation</h1>
-                    <ul className="site-nav">
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/">Blog</a></li>
-                    </ul>
+                    <h1>About Me</h1>
+                    <p>I'm a Mobile Web Engineer at Zappos.com and part-time Frontend Instructor at <a href="http://www.theironyard.com">The Iron Yard</a>.</p>
+                    <p>I'm a life hacker.</p>
+                    <p><em>I believe that intentional input, with the ability to look back pragmatically at what works and what doesn't is the key to building an effective life.</em></p>
                 </div>
             </div>
         );
@@ -74,7 +73,7 @@ var Footer = React.createClass({
     render () {
         return (
             <div id="footer">
-                Static site generated with React, Webpack and Sass.
+                Static site generated with React, Webpack and Sass. <br /> Find the source for <a href="https://github.com/chaseadamsio/chaseadams.io">chaseadams.io on Github</a>.
             </div>
         );
     }
@@ -95,6 +94,12 @@ var App = React.createClass({
                             <li>
                                 <h1><a href="/" className="site-title">Chase Adams</a></h1>
                                 <h2>intentional input for outstanding output.</h2>
+                            </li>
+                            <li>
+                             <ul className="site-nav">
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/">Blog</a></li>
+                            </ul>
                             </li>
                         </ul>
                     </div>
