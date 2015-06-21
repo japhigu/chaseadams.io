@@ -1,6 +1,6 @@
 {
   "name": "@chaseadamsio/chaseadams.io",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A bespoke blog platform",
   "main": "index.js",
   "scripts": {
